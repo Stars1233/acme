@@ -49,7 +49,7 @@ def get_observation_stats(transitions_iterator: tf.data.Dataset
   # be problematic with e.g. demonstrations coming from a different version
   # of the environment and where the constant values are slightly different).
   scale = 1 / ((std < 1e-6) + std)
-  return shift, scale
+  return shift, scale  # pyrefly: ignore[bad-return]
 
 
 def make_environment(
