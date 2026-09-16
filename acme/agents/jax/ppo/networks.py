@@ -55,7 +55,7 @@ class PPOParams(NamedTuple):
   model_params: networks_lib.Params
   # Using float32 as it covers a larger range than int32. If using int64 we
   # would need to do jax_enable_x64.
-  num_sgd_steps: jnp.float32
+  num_sgd_steps: jnp.float32  # pyrefly: ignore[not-a-type]
 
 
 @dataclasses.dataclass

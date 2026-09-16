@@ -97,7 +97,7 @@ class NormalizedGenericActor(actors.GenericActor[actor_core.State,
 
 class EMAMeanStdNormalizerParams(NamedTuple):
   """Using technique form Adam optimizer paper for computing running stats."""
-  ema_counter: jnp.int32
+  ema_counter: jnp.int32  # pyrefly: ignore[not-a-type]
   biased_first_moment: types.NestedArray
   biased_second_moment: types.NestedArray
 
@@ -134,7 +134,7 @@ def build_ema_mean_std_normalizer(
 
   def _normalize_leaf(
       x: jnp.ndarray,
-      ema_counter: jnp.int32,
+      ema_counter: jnp.int32,  # pyrefly: ignore[not-a-type]
       biased_first_moment: jnp.ndarray,
       biased_second_moment: jnp.ndarray,
   ) -> jnp.ndarray:

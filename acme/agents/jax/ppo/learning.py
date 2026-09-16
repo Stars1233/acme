@@ -58,7 +58,7 @@ class TrainingState(NamedTuple):
   # Optional counter used for exponential moving average zero debiasing
   # Using float32 as it covers a larger range than int32. If using int64 we
   # would need to do jax_enable_x64.
-  ema_counter: Optional[jnp.float32] = None
+  ema_counter: Optional[jnp.float32] = None  # pyrefly: ignore[not-a-type]
 
   # Optional parameter for maintaining a running estimate of the scale of
   # advantage estimates
